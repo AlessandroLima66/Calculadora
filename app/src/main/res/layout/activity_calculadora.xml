@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculadoraActivity">
+
+    <TextView
+        android:id="@+id/calculadora_valor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:hint="Valor"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/calculadora_botao_apagar"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.00999999" />
+
+    <Button
+        android:id="@+id/calculadora_botao_apagar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="<"
+        app:layout_constraintBottom_toBottomOf="@+id/calculadora_valor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_valor"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_valor" />
+
+    <Button
+        android:id="@+id/calculadora_botao_mais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:layout_constraintEnd_toEndOf="@+id/calculadora_botao_apagar"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_botao_nove"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_botao_nove" />
+
+    <Button
+        android:id="@+id/calculadora_botao_igual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="="
+        app:layout_constraintEnd_toEndOf="@+id/calculadora_botao_tres"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="@+id/calculadora_botao_tres"
+        app:layout_constraintTop_toBottomOf="@+id/calculadora_botao_tres" />
+
+    <Button
+        android:id="@+id/calculadora_botao_dividir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="/"
+        app:layout_constraintEnd_toEndOf="@+id/calculadora_botao_vezes"
+        app:layout_constraintStart_toStartOf="@+id/calculadora_botao_vezes"
+        app:layout_constraintTop_toBottomOf="@+id/calculadora_botao_vezes" />
+
+    <Button
+        android:id="@+id/calculadora_botao_vezes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="x"
+        app:layout_constraintEnd_toEndOf="@+id/calculadora_botao_menos"
+        app:layout_constraintStart_toStartOf="@+id/calculadora_botao_menos"
+        app:layout_constraintTop_toBottomOf="@+id/calculadora_botao_menos" />
+
+    <Button
+        android:id="@+id/calculadora_botao_menos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="@+id/calculadora_botao_mais"
+        app:layout_constraintStart_toStartOf="@+id/calculadora_botao_mais"
+        app:layout_constraintTop_toBottomOf="@+id/calculadora_botao_mais" />
+
+    <Button
+        android:id="@+id/calculadora_botao_sete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="7"
+        app:layout_constraintEnd_toStartOf="@+id/calculadora_botao_oito"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/calculadora_valor"
+        app:layout_constraintTop_toBottomOf="@+id/calculadora_valor"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/calculadora_botao_oito"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8"
+        app:layout_constraintEnd_toStartOf="@+id/calculadora_botao_nove"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_botao_sete"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_botao_sete" />
+
+    <Button
+        android:id="@+id/calculadora_botao_nove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="9"
+        app:layout_constraintEnd_toStartOf="@+id/calculadora_botao_mais"
+        app:layout_constraintStart_toEndOf="@+id/calculadora_botao_oito"
+        app:layout_constraintTop_toTopOf="@+id/calculadora_botao_oito" />
+
+    <Button
+        android:id="@+id/calculadora_botao_quatro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="4"
+        app:layout_constraintEnd_toEndOf="@+id/calculadora_botao_sete"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/calculadora_botao_sete"
+        app:layout_constraintTop_toBottomOf="@+id/calculadora_botao_sete" />
+
+    <Button
+        android:id="@+id/calculadora_botao_cinco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="5"
+        app:layout_constraintEnd_toEndOf="@+id/calculadora_botao_oito"
+        app:layout_constraintStart_toStartOf="@+id/calculadora_botao_oito"
+        app:layout_constraintTop_toBottomOf="@+id/calculadora_botao_oito" />
+
+    <Button
+        android:id="@+id/calculadora_botao_seis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="6"
+        app:layout_constraintEnd_toEndOf="@+id/calculadora_botao_nove"
+        app:layout_constraintStart_toStartOf="@+id/calculadora_botao_nove"
+        app:layout_constraintTop_toBottomOf="@+id/calculadora_botao_nove" />
+
+    <Button
+        android:id="@+id/calculadora_botao_um"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="1"
+        app:layout_constraintEnd_toEndOf="@+id/calculadora_botao_quatro"
+        app:layout_constraintStart_toStartOf="@+id/calculadora_botao_quatro"
+        app:layout_constraintTop_toBottomOf="@+id/calculadora_botao_quatro" />
+
+    <Button
+        android:id="@+id/calculadora_botao_dois"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="2"
+        app:layout_constraintEnd_toEndOf="@+id/calculadora_botao_cinco"
+        app:layout_constraintStart_toStartOf="@+id/calculadora_botao_cinco"
+        app:layout_constraintTop_toBottomOf="@+id/calculadora_botao_cinco" />
+
+    <Button
+        android:id="@+id/calculadora_botao_tres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="3"
+        app:layout_constraintEnd_toEndOf="@+id/calculadora_botao_seis"
+        app:layout_constraintStart_toStartOf="@+id/calculadora_botao_seis"
+        app:layout_constraintTop_toBottomOf="@+id/calculadora_botao_seis" />
+
+    <Button
+        android:id="@+id/calculadora_botao_zero"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/calculadora_botao_dois"
+        app:layout_constraintStart_toStartOf="@+id/calculadora_botao_um"
+        app:layout_constraintTop_toBottomOf="@+id/calculadora_botao_um" />
+
+
+</android.support.constraint.ConstraintLayout>
