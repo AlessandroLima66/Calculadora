@@ -4,8 +4,9 @@ public interface CalculadoraActivityView {
 
     void setExpressao(String valor);
 
-    CharSequence getExpressao();
+    String getExpressao();
 
-    void showToastExpressao();
+    void showToastExpressao(String mensagem);
 
+    void showToastErro(String mensagem);
 }

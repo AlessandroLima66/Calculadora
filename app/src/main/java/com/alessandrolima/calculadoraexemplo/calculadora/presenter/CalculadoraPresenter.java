@@ -64,15 +64,14 @@ public class CalculadoraPresenter extends BasePresenter {
                 view.setExpressao(apagaValor(view.getExpressao()));
                 break;
             case R.id.calculadora_botao_igual:
-//                view.showToastExpressao();
                 validaExpressao();
                 break;
         }
     }
 
-    private String  apagaValor(CharSequence expressao) {
+    private String  apagaValor(String expressao) {
         if (expressao.length() > 0)
-           return (String) expressao.subSequence(0, expressao.length()-1);
+           return expressao.substring(0, expressao.length()-1);
         else
             return "";
     }
@@ -82,15 +81,11 @@ public class CalculadoraPresenter extends BasePresenter {
     }
 
     private void validaExpressao() {
-        CharSequence expressao = view.getExpressao();
-        String exp="";
-
-        for (int i = 0; i < expressao.length(); i++){
-            int aux = i;
-            while (Character.isDigit(expressao.charAt(i))==true){
-                i++;
-            }
-            
+        try {
+            double resul = ValidaExpressaoHelper.resolveExpressao(view.getExpressao());
+            view.showToastExpressao("Resultado = " + resul);
+        }catch (Exception a){
+            view.showToastErro(a.getMessage());
         }
     }
 }

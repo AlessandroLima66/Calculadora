@@ -90,13 +90,18 @@ public class CalculadoraActivity extends BaseActivity<CalculadoraPresenter>
     }
 
     @Override
-    public CharSequence getExpressao() {
-        return expressao.getText();
+    public String getExpressao() {
+        return String.valueOf(expressao.getText());
     }
 
     @Override
-    public void showToastExpressao() {
-        Toast.makeText(this,expressao.getText(), Toast.LENGTH_LONG).show();
+    public void showToastExpressao(String mensagem) {
+        Toast.makeText(this,mensagem, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void showToastErro(String mensagem) {
+        Toast.makeText(this,mensagem, Toast.LENGTH_LONG).show();
     }
 
     private class OnButtonsClicked implements View.OnClickListener {
